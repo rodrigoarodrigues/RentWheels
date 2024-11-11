@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="adicionar">Add</button>
+    <button id="listar">Listar</button>
+    <button id="excluir">Remover</button>
+
+    <script type="module">
+        import { addCar, getCars, remCar } from '../admin.js';
+
+        adicionar.addEventListener('click', () => addCar("Carro1", "Anda fofo", "url fake", 10));
+        listar.addEventListener('click', () => getCars());
+        excluir.addEventListener('click', () => remCar("Carro1"));
+    </script>
+</body>
+</html>
