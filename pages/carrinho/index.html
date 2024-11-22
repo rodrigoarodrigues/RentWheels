@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RentWheels</title>
-    <link rel="stylesheet" href="global.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="carrinho.css">
 </head>
 <body>
-    
     <nav>
         <a href="/">
-            <img src="assets/hotwheels.png" alt="Logo">
+            <img src="/assets/hotwheels.png" alt="Logo">
         </a>
         
         <div class="nav-items">
@@ -19,7 +18,7 @@
                 <a href=""></a>
                 <a href=""></a>
             </div>
-            <a href="./pages/login/">
+            <a href="/pages/login/">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 19.7823C18 18.2488 17.3679 16.778 16.2426 15.6936C15.1174 14.6092 13.5913 14 12 14C10.4087 14 8.88258 14.6092 7.75736 15.6936C6.63214 16.778 6 18.2488 6 19.7823" fill="white"/>
                     <path d="M18 19.7823C18 18.2488 17.3679 16.778 16.2426 15.6936C15.1174 14.6092 13.5913 14 12 14C10.4087 14 8.88258 14.6092 7.75736 15.6936C6.63214 16.778 6 18.2488 6 19.7823C10.5545 22.7752 13.1886 22.703 18 19.7823Z" fill="white"/>
@@ -29,76 +28,93 @@
                     <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>    
             </a>
-            <a href="/pages/carrinho/">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-cart"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
-            </a>
                 
         </div>
     </nav>
     <div class="fix-height"></div>
-    <section class="banner">
-        
-        <div class="frame">
-            <div class="banner-title">
-                <h1>Os carros mais potentes você encontra aqui!</h1>
-            </div>
-            <iframe allow="autoplay; encrypted-media" src="https://www.youtube.com/embed/PlpvJfhac6I?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&showinfo=0&playlist=PlpvJfhac6I" frameborder="0">
-
-               
-            </iframe>
-           
-        </div>
-        <div class="pros">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock-arrow-up"><path d="M13.228 21.925A10 10 0 1 1 21.994 12.338"/><path d="M12 6v6l1.562.781"/><path d="m14 18 4-4 4 4"/><path d="M18 22v-8"/></svg>Funcionamos 24h</div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></svg>Entrega na hora</div>
-            <div><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>Pagamento seguro</div>
-        </div>
-        
-    </section>
     <section class="featured">
-        <h1>Destaques da semana</h1>
+        <h1>Carrinho</h1>
         <div class="product-grid">
 
         </div>
     </section>
+    <div class="finish">
+        <div>
+            <label for="days">Quantidade de dias:</label>
+        <input value="1" type="number" name="days" id="days">
+        <div style="display: flex; width: 100%; justify-content: center; align-items: center; font-weight: bold; font-size: 1.5rem;">
+            Total: 
+            <p style="margin: 0 0 0 0.5rem;" id="total">
+                
+            </p>
+        </div>
+        </div>
+        
+        
+        <span id="finish-order">
+        FINALIZAR COMPRA
+
+        </span>
+    </div>
     <script type="module">
-        import { addCar, getCars, remCar } from './pages/admin/admin.js';
-        import { getDominantColor } from './pages/product/product.js'
+        import { addCar, getCars,getCart, remCar } from '/pages/admin/admin.js';
+        import { getDominantColor } from '/pages/product/product.js'
+        
+        let total = 0;
         document.addEventListener('click', (event) => {
             // Check if the clicked element or its parent matches the selector
             const clickedItem = event.target.closest('.product-card');
+            const finish = event.target.closest('#finish-order')
+
+            if(finish){
+                localStorage.removeItem("carrinho")
+           if(!alert('Compra finalizada com sucesso!')){window.location.reload();}
+
+            }
             
             if (clickedItem) {
                 localStorage.setItem('productClicked', clickedItem.id)
                 window.location.href = "/pages/product/index.html"
             }
         });
+
+        document.getElementById('days').addEventListener("input", (event) => {
+            total *= event.target.value
+            document.querySelector('#total').textContent = total
+            
+        })
         function renderProducts(){
             const productGrid = document.querySelector('.product-grid')
             productGrid.innerHTML = ''
 
             const products = getCars()
-            
+            const carrinho = getCart() 
 
             products.forEach( async (e,i) => {
-                if(i <=2){
-                    const productCard = document.createElement('div');
+
+                carrinho.forEach(async (f, j)=>{
+                    if(j === i){
+                        const productCard = document.createElement('div');
                 productCard.classList.add('product-card')
                 productCard.setAttribute('id', i)
                 productCard.innerHTML = `
                 <div id="img-container-${i}" class="product-img">
                     <img id="img-${i}" src="/assets/${e.picture}" alt="${e.name}">
+
                 </div>
-                <div class="product-content">
                     <h3>${e.name}</h3>
+
+                <div class="product-content">
                     <h2>R$${e.pricePerDay}/dia</h2>
                 </div>`
                 productGrid.appendChild(productCard)
                 document.querySelector(`#img-container-${i}`).style.backgroundColor = `rgb(${await getDominantColor(document.getElementById(`img-${i}`).src)})`
-
-                }
+                total+= Number(e.pricePerDay)
+                document.getElementById('total').textContent = total     
+            
+            }    
+                })
+                
             });
 
             

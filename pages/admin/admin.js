@@ -20,3 +20,8 @@ export function getCars() {
     const x = JSON.parse(localStorage.getItem("cars")) || [];
     return x
 }
+export function getCart() {
+    
+    const x = JSON.parse(localStorage.getItem("carrinho")) || [];
+    return x
+}

@@ -99,3 +99,9 @@ async function getProduct() {
 }
 getProduct()
 
+
+export function addCar(id) {
+    const cars = JSON.parse(localStorage.getItem("cars")) || [];
+    cars.push({ id });
+    localStorage.setItem("carsCarrinho", JSON.stringify(cars));
+}
