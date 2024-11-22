@@ -62,7 +62,7 @@
     </section>
     <script type="module">
         import { addCar, getCars, remCar } from './pages/admin/admin.js';
-
+        import { getDominantColor } from './pages/product/product.js'
         document.addEventListener('click', (event) => {
             // Check if the clicked element or its parent matches the selector
             const clickedItem = event.target.closest('.product-card');
@@ -79,22 +79,26 @@
             const products = getCars()
             
 
-            products.forEach((e,i) => {
+            products.forEach( async (e,i) => {
                 if(i <=2){
                     const productCard = document.createElement('div');
                 productCard.classList.add('product-card')
                 productCard.setAttribute('id', i)
                 productCard.innerHTML = `
-                <div class="product-img">
-                    <img src="${e.picture}" alt="${e.picture}">
+                <div id="img-container-${i}" class="product-img">
+                    <img id="img-${i}" src="/assets/${e.picture}" alt="${e.name}">
                 </div>
                 <div class="product-content">
                     <h3>${e.name}</h3>
                     <h2>R$${e.pricePerDay}/dia</h2>
                 </div>`
                 productGrid.appendChild(productCard)
+                document.querySelector(`#img-container-${i}`).style.backgroundColor = `rgb(${await getDominantColor(document.getElementById(`img-${i}`).src)})`
+
                 }
             });
+
+            
         }
         renderProducts()
     </script>

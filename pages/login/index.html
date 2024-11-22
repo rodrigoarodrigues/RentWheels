@@ -60,10 +60,12 @@
         function login(){
             if($('#username').value === 'admin' && $('#password').value === '1234' ){
 
-            window.location.href = '../admin/'
+            window.location.href = '../admin/carros/'
             
             }else if($('#username').value === user && $('#password').value === userPass){
-            window.location.href = '../catalogo'
+            window.location.href = '../catalogo/'
+            }else{
+                alert('Usuário ou senha inválidos')
             }
         }
 

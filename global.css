@@ -105,6 +105,8 @@ nav{
     padding: 2rem;
 }
 .product-card{
+    transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 200ms;
+    transform: skew(-5deg);
     display: flex;
     aspect-ratio: 3/4;
     height: 20rem;
@@ -117,6 +119,7 @@ nav{
     pointer-events: all;
     cursor: pointer;
     z-index: 2;
+
     .product-img{
         flex: 1;
         background-color: lightgray;
@@ -124,7 +127,7 @@ nav{
         img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
             border-bottom: lightgray 1px solid;
         }
     }
@@ -141,6 +144,10 @@ nav{
 
 }
 
+.product-card:hover{
+    transform: skew(0);
+    scale: 1.1;
+}
 
 
 .fix-height{

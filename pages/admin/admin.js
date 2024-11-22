@@ -1,13 +1,18 @@
-export function addCar(name, description, picture, pricePerDay) {
+export function addCar(name, description, picture, pricePerDay, specs) {
     const cars = JSON.parse(localStorage.getItem("cars")) || [];
-    cars.push({ name, description, picture, pricePerDay });
+    cars.push({ name, description, picture, pricePerDay, specs });
     localStorage.setItem("cars", JSON.stringify(cars));
 }
 
-export function remCar(name) {
-    let cars = JSON.parse(localStorage.getItem("cars")) || [];
-    cars = cars.filter(car => car.name !== name);
-    localStorage.setItem("cars", JSON.stringify(cars));
+export function remCar(id) {
+    const cars = JSON.parse(localStorage.getItem("cars")) || [];
+    let newCars = []
+    cars.forEach((e,i) => {
+        if(i != id){
+            newCars.push(e)
+        }
+    })
+    localStorage.setItem("cars", JSON.stringify(newCars));
 }
 
 export function getCars() {
