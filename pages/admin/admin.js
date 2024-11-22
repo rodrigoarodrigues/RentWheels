@@ -13,5 +13,5 @@ export function remCar(name) {
 export function getCars() {
     
     const x = JSON.parse(localStorage.getItem("cars")) || [];
-    console.log(x);
+    return x
 }

@@ -18,6 +18,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 99;
     background-color: rgb(60, 102, 255);
     width: 100%;
     height: 8rem;
@@ -46,12 +47,13 @@ nav{
     }
 }
 
-main{
+.banner{
     display: flex;
     flex-direction: column;
     margin: 0;
     height: 100%;
     width: 100%;
+    overflow-y: scroll;
     background-color: black;
     justify-content: center;
     align-items: center;
@@ -71,13 +73,110 @@ main{
             gap: 0.5rem;
         }
     }
+
 }
+.featured{
+    border-top: solid 1px rgb(231, 236, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: white;
+    width: 100%;
+    h1{
+        padding-top: 2rem;
+        font-family: "Bangers";
+        font-size: 2rem;
+        font-weight: 400;
+        margin: 0;
+    }
+}
+
+.product-grid{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 15rem 15rem 15rem;
+    grid-gap: clamp(10px, 3vw, 30px);
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.product-card{
+    display: flex;
+    aspect-ratio: 3/4;
+    height: 20rem;
+    box-shadow:0 4px 6px rgba(0, 0, 0, 0.3);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    pointer-events: all;
+    cursor: pointer;
+    z-index: 2;
+    .product-img{
+        flex: 1;
+        background-color: lightgray;
+        width: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-bottom: lightgray 1px solid;
+        }
+    }
+    .product-content{
+        margin: 0.5rem 0;
+        width: 90%;
+        h2{
+            color: rgb(255, 73, 60);
+        }
+    }
+    h3,h2{
+        margin: 0;
+    }
+
+}
+
+
+
 .fix-height{
-    flex: 0 8rem;
+    height: 8rem;
 }
 iframe{
+    width: auto;
+    height: 100%;
+    aspect-ratio: 16/9;
+}
+.frame{
+    position: relative;
     pointer-events: none;
     width: auto;
     flex: 1;
     aspect-ratio: 16/9;
+}
+
+.banner-title{
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: all;
+    transition: all ease-in-out 200ms;
+    font-family: 'Bangers';
+    font-weight: 400;
+}
+.banner-title:hover{
+    opacity: 0;
 }

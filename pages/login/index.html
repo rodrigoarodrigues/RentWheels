@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentWheels Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav>
+        <a href="/">
+            <img src="../../assets/hotwheels.png" alt="Logo">
+        </a>
+        
+        <div class="nav-items">
+            <div class="nav-links">
+                <a href="/pages/catalogo/index.html">Catálogo</a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+            <a href="../login/">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 19.7823C18 18.2488 17.3679 16.778 16.2426 15.6936C15.1174 14.6092 13.5913 14 12 14C10.4087 14 8.88258 14.6092 7.75736 15.6936C6.63214 16.778 6 18.2488 6 19.7823" fill="white"/>
+                    <path d="M18 19.7823C18 18.2488 17.3679 16.778 16.2426 15.6936C15.1174 14.6092 13.5913 14 12 14C10.4087 14 8.88258 14.6092 7.75736 15.6936C6.63214 16.778 6 18.2488 6 19.7823C10.5545 22.7752 13.1886 22.703 18 19.7823Z" fill="white"/>
+                    <path d="M18 19.7823C18 18.2488 17.3679 16.778 16.2426 15.6936C15.1174 14.6092 13.5913 14 12 14C10.4087 14 8.88258 14.6092 7.75736 15.6936C6.63214 16.778 6 18.2488 6 19.7823"  stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 19.7823C18 18.2488 17.3679 16.778 16.2426 15.6936C15.1174 14.6092 13.5913 14 12 14C10.4087 14 8.88258 14.6092 7.75736 15.6936C6.63214 16.778 6 18.2488 6 19.7823C10.5545 22.7752 13.1886 22.703 18 19.7823Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12 14C14.2091 14 16 12.2091 16 10C16 7.79086 14.2091 6 12 6C9.79086 6 8 7.79086 8 10C8 12.2091 9.79086 14 12 14Z" stroke="white" stroke-width="0" stroke-linecap="round" fill="white" stroke-linejoin="round"/>
+                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>    
+            </a>
+            
+        </div>
+    </nav>
+    <div class="fix-height"></div>
+    <main>
+        <div class="login-container">
+            <form class="login-form">
+                <h2>Login</h2>
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        function $(e){
+            return document.querySelector(e)
+        }
+        const admUser = 'admin'
+        const admPass = '1234'
+        const user = 'user'
+        const userPass = '1234'
+
+        function login(){
+            if($('#username').value === 'admin' && $('#password').value === '1234' ){
+
+            window.location.href = '../admin/'
+            
+            }else if($('#username').value === user && $('#password').value === userPass){
+            window.location.href = '../catalogo'
+            }
+        }
+
+        $('.login-form').addEventListener("submit", function(event){
+            event.preventDefault();
+            login()
+        } )
+        
+    </script>
+</body>
+</html>
