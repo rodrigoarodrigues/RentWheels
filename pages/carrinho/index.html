@@ -79,8 +79,8 @@
         });
 
         document.getElementById('days').addEventListener("input", (event) => {
-            total *= event.target.value
-            document.querySelector('#total').textContent = total
+            let result = total * event.target.value
+            document.querySelector('#total').textContent = 'R$' + result
             
         })
         function renderProducts(){
@@ -110,7 +110,7 @@
                 productGrid.appendChild(productCard)
                 document.querySelector(`#img-container-${i}`).style.backgroundColor = `rgb(${await getDominantColor(document.getElementById(`img-${i}`).src)})`
                 total+= Number(e.pricePerDay)
-                document.getElementById('total').textContent = total     
+                document.getElementById('total').textContent = 'R$' + total     
             
             }    
                 })

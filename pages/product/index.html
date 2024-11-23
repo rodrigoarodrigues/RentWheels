@@ -172,7 +172,8 @@
         }
 
         // Exemplo de uso: Passe o ID do carro para configurar o botão
-        const currentCarId = 1; // Substitua pelo ID do carro renderizado na página
+        let currentCarId = localStorage.getItem("productClicked"); // Substitua pelo ID do carro renderizado na página
+        console.log(currentCarId)
         setupAddToCartButton(currentCarId);
 
     </script>
